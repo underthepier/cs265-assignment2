@@ -248,37 +248,37 @@ void write_to_file(struct GradeEntry *head, char *input_file)
 
     if(-1 == write(filedes,student->studentId,10))
       {
-          printf("Error writing student id\n");
+          fprintf(stderr, "Error writing student id\n");
           return;
       }
 
       if(-1 == write(filedes,&colon,1))
       {
-          printf("Error writing colon\n");
+          fprintf(stderr, "Error writing colon\n");
           return;
       }
 
       if(-1 == write(filedes,student->assignmentName,assignment_bytes))
       {
-          printf("Error writing assignment name\n");
+          fprintf(stderr, "Error writing assignment name\n");
           return;
       }
 
       if(-1 == write(filedes,&colon,1))
       {
-          printf("Error writing colon\n");
+          fprintf(stderr, "Error writing colon\n");
           return;
       }
 
       if(-1 == write(filedes,student_grade,grade_bytes))
       {
-          printf("Error writing grade\n");
+          fprintf(stderr, "Error writing grade\n");
           return;
       }
 
       if(-1 == write(filedes,&newline,1))
       {
-          printf("Error writing newline\n");
+          fprintf(stderr, "Error writing newline\n");
           return;
       }
   }
